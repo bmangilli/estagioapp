@@ -1,0 +1,63 @@
+:root {
+    /* variaveis css */
+    --color-background: #F0F0F7;
+    --color-logo-dark: #211915;
+    --color-logo-reverse: #151d21;
+    --color-logo-dlight: #46342b;
+    --color-logo-rlight: #294452;
+    --color-boxes: #5f5048;
+    --color-whiteg: #f6f6f6;
+    --color-primary-lighter: #9871F5;
+    --color-primary-light: #916BEA;
+    --color-primary: #8257E5;
+    --color-title-in-primary: #FFFFFF;
+    --color-text-in-primary: #D4C2FF;
+    --color-text-title: #32264D;
+    --color-text-complement: #9C98A6;
+    --color-text-base: #6A6180;
+    --color-line-in-white: #E6E6F0;
+    --color-input-background: #F8F8FC;
+    --color-box-base: #FFFFFF;
+    --color-box-footer: #FAFAFC;
+    --color-small-info: #C1BCCC;
+    --color-button-text: #FFFFFF;
+
+    /* tamanho da fonte padrao: 16px - 100% - 1rem */
+    font-size: 60%; /* controle das medidas rem */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+body {
+    background: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body,
+input,
+button,
+textarea {
+    font: 500 1.6rem Poppins;
+}
+
+#container {
+    width: 90vw;
+    max-width: 700px;
+}
+
+@media (min-width: 700px) {
+    :root {
+        font-size: 62.5%;
+    }
+}
