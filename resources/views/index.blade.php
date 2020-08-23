@@ -27,7 +27,7 @@
                 Produtos
             </a>
             <a class="sales" href="/central/vendas">
-                <img src="/images/icons/basket.png" alt="Cadastro de produtos">
+                <img src="/images/icons/basket.png" alt="Cadastro de vendas">
                 Vendas
             </a>
         </div>

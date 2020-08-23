@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Produto;
+use DB;
+use URL;
 
 class ProdutosController extends Controller
 
@@ -21,7 +23,7 @@ class ProdutosController extends Controller
             'custo' => $request->custo,
         ]);
 
-        return "Produto Criado com Sucesso!";
+        header('Refresh: 0; URL=/central/produtos');
     }
 
     public function show($id)
@@ -43,8 +45,7 @@ class ProdutosController extends Controller
             'descricao' => $request->descricao,
             'custo' => $request->custo,
         ]);
-
-        return "Produto Atualizado com Sucesso!";
+        header('Refresh: 0; URL=/central/produtos');
     }
     public function delete($id)
     {
@@ -56,6 +57,13 @@ class ProdutosController extends Controller
         $produto = Produto::findOrFail($id);
         $produto->delete();
 
-        return "Produto Excluído com Sucesso";
+        header('Refresh: 0; URL=/central/produtos');
+    }
+
+    public function filtrar() {
+
+        $filtro = DB::table('produtos')->get();
+    
+        return view('central.admprodutos', ['filtro' => $filtro]);
     }
 }

@@ -38,3 +38,9 @@ Route::post('/produtos/excluir/{id}', 'ProdutosController@destroy')->name('exclu
 Route::get('/vendas/novo', 'VendasController@create');
 Route::post('/vendas/novo', 'VendasController@store')->name('cadastrar_venda');
 Route::get('/vendas/ver/{id}', 'VendasController@show');
+Route::post('/vendas/excluir/{id}', 'VendasController@destroy')->name('excluir_venda');
+Route::post('/vendas/editar/{id}', 'VendasController@update')->name('alterar_venda');
+
+// FILTROS
+Route::get('/central/produtos', 'ProdutosController@filtrar');
+Route::get('/central/vendas', 'VendasController@filtrar');

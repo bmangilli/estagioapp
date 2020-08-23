@@ -1,5 +1,7 @@
 .page-header {
-    background-color: var(--color-logo-rlight);
+    height: 23.5rem;
+
+    background-color: var(--color-logo-dark);
 
     display: flex;
     flex-direction: column;
@@ -33,21 +35,18 @@
     width: 90%;
     margin: 3.2rem auto;
 
-    position: relative;
 }
 
 .page-header .header-content strong {
     font: 700 3.6rem Archivo;
     line-height: 4.2rem;
-    color: var(--color-title-in-primary);
+    color: var(--color-background);
 }
 
-.page-header .header-content p {
-    max-width: 30rem;
-    font-size: 1.6rem;
-    line-height: 2.6rem;
-    color: var(--color-text-in-primary);
-    margin-top: 2.4rem;
+.page-header .header-content .select-block a{
+    margin-left: 3rem;
+    color: var(--color-logo-rlight);
+    text-decoration:none;
 }
 
 
